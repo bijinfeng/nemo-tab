@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite";
 import type { StorybookConfig } from "storybook-solidjs-vite";
 
 const config: StorybookConfig = {
@@ -6,6 +7,12 @@ const config: StorybookConfig = {
 	framework: {
 		name: "storybook-solidjs-vite",
 		options: {},
+	},
+	viteFinal: async (config) => {
+		return {
+			...config,
+			plugins: [tailwindcss()],
+		};
 	},
 };
 export default config;
