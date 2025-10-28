@@ -1,7 +1,7 @@
 {
 	"name": "flowbite-solid",
-	"version": "0.0.0",
-	"description": "{{desc_of_lib}}",
+	"version": "0.0.1",
+	"description": "Official Solid components built for Flowbite and Tailwind CSS",
 	"license": "MIT",
 	"author": "bijinfeng",
 	"contributors": [],
