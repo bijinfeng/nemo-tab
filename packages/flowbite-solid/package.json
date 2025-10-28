@@ -5,6 +5,9 @@
 	"license": "MIT",
 	"author": "bijinfeng",
 	"contributors": [],
+	"keywords": [
+		"solid"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/bijinfeng/flowbite-solid.git"
@@ -41,33 +44,20 @@
 	},
 	"typesVersions": {},
 	"scripts": {
-		"dev": "vite serve dev",
-		"build": "tsup",
-		"test": "concurrently pnpm:test:*",
-		"test:client": "vitest",
-		"test:ssr": "pnpm run test:client --mode ssr",
+		"build": "tsdown",
 		"prepublishOnly": "pnpm build",
-		"lint": "concurrently pnpm:lint:*",
-		"lint:types": "tsc --noEmit",
-		"update-deps": "pnpm up -Li"
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
 	},
 	"peerDependencies": {
 		"solid-js": "^1.6.0"
 	},
 	"devDependencies": {
-		"concurrently": "^8.2.2",
-		"esbuild": "^0.21.3",
-		"esbuild-plugin-solid": "^0.6.0",
-		"jsdom": "^24.0.0",
+		"@storybook/addon-docs": "9.1.15",
 		"solid-js": "^1.8.17",
-		"tsup": "^8.0.2",
-		"tsup-preset-solid": "^2.2.0",
-		"typescript": "^5.4.5",
-		"vite": "^5.2.11",
-		"vite-plugin-solid": "^2.10.2",
-		"vitest": "^1.6.0"
-	},
-	"keywords": [
-		"solid"
-	]
+		"storybook": "9.1.15",
+		"storybook-solidjs-vite": "9.0.3",
+		"tsdown": "^0.15.11",
+		"unplugin-solid": "^1.0.0"
+	}
 }
