@@ -7,5 +7,6 @@ onlyBuiltDependencies:
 
 packages:
   - "packages/*"
+  - "plugins/*"
   - "."
   - "!**/test/**"

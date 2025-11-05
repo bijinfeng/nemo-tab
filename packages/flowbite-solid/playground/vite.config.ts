@@ -1,8 +1,8 @@
 import tailwindcss from "@tailwindcss/vite";
+import solid from "unplugin-solid/vite";
 import { defineConfig } from "vite";
-import solidPlugin from "vite-plugin-solid";
 
 export default defineConfig({
 	root: "./playground",
-	plugins: [solidPlugin(), tailwindcss()],
+	plugins: [solid(), tailwindcss()],
 });

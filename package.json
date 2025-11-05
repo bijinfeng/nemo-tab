@@ -22,14 +22,19 @@
 		"tsdown": "^0.16.0",
 		"typescript": "^5.9.3",
 		"unplugin-solid": "^1.0.0",
-		"vite": "npm:rolldown-vite@latest",
-		"vite-plugin-solid": "^2.11.10"
+		"vite": "^7.2.0",
+		"vite-plugin-zephyr": "^0.0.59"
 	},
 	"dependencies": {
+		"@module-federation/enhanced": "^0.21.2",
 		"@solidjs/router": "^0.15.0",
 		"@solidjs/start": "^1.1.0",
+		"await-to-js": "^3.0.0",
 		"better-sqlite3": "^11.0.0",
 		"drizzle-orm": "^0.31.2",
+		"eventemitter3": "^5.0.1",
+		"flowbite-solid": "workspace:*",
+		"nemo-shared": "workspace:*",
 		"solid-js": "^1.9.5",
 		"vinxi": "^0.5.7"
 	},
