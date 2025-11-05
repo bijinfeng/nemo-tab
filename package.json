@@ -15,11 +15,15 @@
 		"@types/better-sqlite3": "^7.6.10",
 		"@types/node": "^24.7.0",
 		"concurrently": "^8.2.2",
-		"drizzle-kit": "^0.22.7",
+		"drizzle-kit": "^0.31.6",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.2.6",
 		"tailwindcss": "^4.1.16",
-		"typescript": "^5.9.3"
+		"tsdown": "^0.16.0",
+		"typescript": "^5.9.3",
+		"unplugin-solid": "^1.0.0",
+		"vite": "npm:rolldown-vite@latest",
+		"vite-plugin-solid": "^2.11.10"
 	},
 	"dependencies": {
 		"@solidjs/router": "^0.15.0",

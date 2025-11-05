@@ -112,56 +112,56 @@ export interface FlowbiteSizes {
 }
 
 // Theme interface using inline imports
-// export interface FlowbiteTheme {
-//   accordion: import("../components/Accordion").AccordionTheme;
-//   alert: import("../components/Alert").AlertTheme;
-//   avatar: import("../components/Avatar").AvatarTheme;
-//   badge: import("../components/Badge").BadgeTheme;
-//   blockquote: import("../components/Blockquote").BlockquoteTheme;
-//   breadcrumb: import("../components/Breadcrumb").BreadcrumbTheme;
-//   button: import("../components/Button").ButtonTheme;
-//   buttonGroup: import("../components/Button").ButtonGroupTheme;
-//   card: import("../components/Card").CardTheme;
-//   carousel: import("../components/Carousel").CarouselTheme;
-//   checkbox: import("../components/Checkbox").CheckboxTheme;
-//   clipboard: import("../components/Clipboard").ClipboardTheme;
-//   darkThemeToggle: import("../components/DarkThemeToggle").DarkThemeToggleTheme;
-//   datepicker: import("../components/Datepicker").DatepickerTheme;
-//   drawer: import("../components/Drawer").DrawerTheme;
-//   dropdown: import("../components/Dropdown").DropdownTheme;
-//   fileInput: import("../components/FileInput").FileInputTheme;
-//   floatingLabel: import("../components/FloatingLabel").FloatingLabelTheme;
-//   footer: import("../components/Footer").FooterTheme;
-//   helperText: import("../components/HelperText").HelperTextTheme;
-//   hr: import("../components/HR").HRTheme;
-//   kbd: import("../components/Kbd").KbdTheme;
-//   label: import("../components/Label").LabelTheme;
-//   list: import("../components/List").ListTheme;
-//   listGroup: import("../components/ListGroup").ListGroupTheme;
-//   megaMenu: import("../components/MegaMenu").MegaMenuTheme;
-//   modal: import("../components/Modal").ModalTheme;
-//   navbar: import("../components/Navbar").NavbarTheme;
-//   pagination: import("../components/Pagination").PaginationTheme;
-//   popover: import("../components/Popover").PopoverTheme;
-//   progress: import("../components/Progress").ProgressTheme;
-//   radio: import("../components/Radio").RadioTheme;
-//   rangeSlider: import("../components/RangeSlider").RangeSliderTheme;
-//   rating: import("../components/Rating").RatingTheme;
-//   ratingAdvanced: import("../components/Rating").RatingAdvancedTheme;
-//   select: import("../components/Select").SelectTheme;
-//   sidebar: import("../components/Sidebar").SidebarTheme;
-//   spinner: import("../components/Spinner").SpinnerTheme;
-//   table: import("../components/Table").TableTheme;
-//   tabs: import("../components/Tabs").TabsTheme;
-//   textarea: import("../components/Textarea").TextareaTheme;
-//   textInput: import("../components/TextInput").TextInputTheme;
-//   timeline: import("../components/Timeline").TimelineTheme;
-//   toast: import("../components/Toast").ToastTheme;
-//   toggleSwitch: import("../components/ToggleSwitch").ToggleSwitchTheme;
-//   tooltip: import("../components/Tooltip").TooltipTheme;
-// }
+export interface FlowbiteTheme {
+	//   accordion: import("../components/Accordion").AccordionTheme;
+	//   alert: import("../components/Alert").AlertTheme;
+	//   avatar: import("../components/Avatar").AvatarTheme;
+	//   badge: import("../components/Badge").BadgeTheme;
+	//   blockquote: import("../components/Blockquote").BlockquoteTheme;
+	//   breadcrumb: import("../components/Breadcrumb").BreadcrumbTheme;
+	button: import("../components/Button").ButtonTheme;
+	buttonGroup: import("../components/Button").ButtonGroupTheme;
+	//   card: import("../components/Card").CardTheme;
+	//   carousel: import("../components/Carousel").CarouselTheme;
+	//   checkbox: import("../components/Checkbox").CheckboxTheme;
+	//   clipboard: import("../components/Clipboard").ClipboardTheme;
+	//   darkThemeToggle: import("../components/DarkThemeToggle").DarkThemeToggleTheme;
+	//   datepicker: import("../components/Datepicker").DatepickerTheme;
+	//   drawer: import("../components/Drawer").DrawerTheme;
+	//   dropdown: import("../components/Dropdown").DropdownTheme;
+	//   fileInput: import("../components/FileInput").FileInputTheme;
+	//   floatingLabel: import("../components/FloatingLabel").FloatingLabelTheme;
+	//   footer: import("../components/Footer").FooterTheme;
+	//   helperText: import("../components/HelperText").HelperTextTheme;
+	//   hr: import("../components/HR").HRTheme;
+	//   kbd: import("../components/Kbd").KbdTheme;
+	//   label: import("../components/Label").LabelTheme;
+	//   list: import("../components/List").ListTheme;
+	//   listGroup: import("../components/ListGroup").ListGroupTheme;
+	//   megaMenu: import("../components/MegaMenu").MegaMenuTheme;
+	//   modal: import("../components/Modal").ModalTheme;
+	//   navbar: import("../components/Navbar").NavbarTheme;
+	//   pagination: import("../components/Pagination").PaginationTheme;
+	//   popover: import("../components/Popover").PopoverTheme;
+	//   progress: import("../components/Progress").ProgressTheme;
+	//   radio: import("../components/Radio").RadioTheme;
+	//   rangeSlider: import("../components/RangeSlider").RangeSliderTheme;
+	//   rating: import("../components/Rating").RatingTheme;
+	//   ratingAdvanced: import("../components/Rating").RatingAdvancedTheme;
+	//   select: import("../components/Select").SelectTheme;
+	//   sidebar: import("../components/Sidebar").SidebarTheme;
+	spinner: import("../components/Spinner").SpinnerTheme;
+	//   table: import("../components/Table").TableTheme;
+	//   tabs: import("../components/Tabs").TabsTheme;
+	//   textarea: import("../components/Textarea").TextareaTheme;
+	//   textInput: import("../components/TextInput").TextInputTheme;
+	//   timeline: import("../components/Timeline").TimelineTheme;
+	//   toast: import("../components/Toast").ToastTheme;
+	//   toggleSwitch: import("../components/ToggleSwitch").ToggleSwitchTheme;
+	//   tooltip: import("../components/Tooltip").TooltipTheme;
+}
 
-// export type CustomFlowbiteTheme = DeepPartial<FlowbiteTheme>;
+export type CustomFlowbiteTheme = DeepPartial<FlowbiteTheme>;
 
 // // Props interface using inline imports
 // export interface FlowbiteProps {
