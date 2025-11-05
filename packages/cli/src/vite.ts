@@ -2,6 +2,7 @@ import { federation } from "@module-federation/vite";
 import solid from "unplugin-solid/vite";
 import type { InlineConfig, ViteDevServer } from "vite";
 import { build, createServer } from "vite";
+import { withZephyr } from "vite-plugin-zephyr";
 
 async function createViteServer(
 	inlineConfig: InlineConfig,
@@ -29,6 +30,7 @@ export async function createBuildServer(options: {
 	const config: InlineConfig = {
 		plugins: [
 			solid(),
+			withZephyr(),
 			federation({
 				filename: "remoteEntry.js",
 				name: "remote",

@@ -105,6 +105,9 @@ importers:
       vite:
         specifier: ^7.2.0
         version: 7.2.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1)
+      vite-plugin-zephyr:
+        specifier: ^0.0.59
+        version: 0.0.59(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1)
     devDependencies:
       '@types/debug':
         specifier: ^4.1.12
