@@ -4,12 +4,14 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "nemo dev"
+		"dev": "nemo dev",
+		"build": "nemo build"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"nemo-cli": "workspace:*"
+		"nemo-cli": "workspace:*",
+		"nemo-shared": "workspace:*"
 	}
 }

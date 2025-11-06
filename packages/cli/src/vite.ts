@@ -1,4 +1,3 @@
-import { federation } from "@module-federation/vite";
 import solid from "unplugin-solid/vite";
 import type { InlineConfig, ViteDevServer } from "vite";
 import { build, createServer } from "vite";
@@ -30,14 +29,15 @@ export async function createBuildServer(options: {
 	const config: InlineConfig = {
 		plugins: [
 			solid(),
-			withZephyr(),
-			federation({
-				filename: "remoteEntry.js",
-				name: "remote",
-				exposes: {
-					"./index": "./src/index.ts",
+			withZephyr({
+				mfConfig: {
+					filename: "remoteEntry.js",
+					name: "remote",
+					exposes: {
+						"./index": "./src/index.ts",
+					},
+					shared: ["solid-js"],
 				},
-				shared: ["solid-js"],
 			}),
 		],
 		resolve: {
