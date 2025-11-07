@@ -11,6 +11,7 @@
 	},
 	"devDependencies": {
 		"solid-devtools": "^0.34.3",
+		"vite": "^7.2.0",
 		"vite-plugin-solid": "^2.11.10"
 	},
 	"dependencies": {
@@ -20,6 +21,7 @@
 		"await-to-js": "^3.0.0",
 		"eventemitter3": "^5.0.1",
 		"flowbite-solid": "workspace:*",
-		"nemo-shared": "workspace:*"
+		"nemo-shared": "workspace:*",
+		"solid-js": "^1.9.10"
 	}
 }
