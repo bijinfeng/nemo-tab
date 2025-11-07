@@ -27,6 +27,9 @@ export async function createBuildServer(options: {
 	dev?: boolean;
 }): Promise<void> {
 	const config: InlineConfig = {
+		build: {
+			target: "esnext",
+		},
 		plugins: [
 			solid(),
 			withZephyr({

@@ -66,9 +66,6 @@ importers:
       lint-staged:
         specifier: ^16.2.6
         version: 16.2.6
-      tailwindcss:
-        specifier: ^4.1.16
-        version: 4.1.16
       tsdown:
         specifier: ^0.16.0
         version: 0.16.0(typescript@5.9.3)(unrun@0.2.1)
@@ -81,9 +78,6 @@ importers:
       vite:
         specifier: ^7.2.0
         version: 7.2.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1)
-      vite-plugin-zephyr:
-        specifier: ^0.0.59
-        version: 0.0.59(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1)
 
   packages/cli:
     dependencies:
