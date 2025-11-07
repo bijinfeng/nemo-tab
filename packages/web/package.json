@@ -20,10 +20,13 @@
 		"@sentry/solid": "^10.23.0",
 		"@sentry/vite-plugin": "^4.6.0",
 		"await-to-js": "^3.0.0",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
 		"eventemitter3": "^5.0.1",
 		"flowbite-solid": "workspace:*",
 		"lodash-es": "^4.17.21",
 		"nemo-shared": "workspace:*",
-		"solid-js": "^1.9.10"
+		"solid-js": "^1.9.10",
+		"tailwind-merge": "^3.3.1"
 	}
 }
