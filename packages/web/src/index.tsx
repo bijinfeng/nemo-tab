@@ -5,7 +5,7 @@ import "./index.css";
 import { render } from "solid-js/web";
 import "solid-devtools";
 
-import App from "./app";
+import App from "./Container";
 
 const root = document.getElementById("root");
 
