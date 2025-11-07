@@ -58,7 +58,9 @@ export async function loginOrRegister(formData: FormData) {
 
 export async function logout() {
   const session = await getSession();
-  await session.update(d => (d.userId = undefined));
+  await session.update(d => {
+    d.userId = undefined
+  });
   throw redirect("/login");
 }
 

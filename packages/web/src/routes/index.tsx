@@ -1,4 +1,4 @@
-import { logout } from "~/api";
+import { logout } from "../api";
 
 export default function Home() {
 	return (

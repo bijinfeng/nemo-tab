@@ -7,40 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@module-federation/enhanced':
-        specifier: ^0.21.2
-        version: 0.21.2(@rspack/core@1.6.0(@swc/helpers@0.5.17))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
-      '@solidjs/router':
-        specifier: ^0.15.0
-        version: 0.15.3(solid-js@1.9.10)
-      '@solidjs/start':
-        specifier: ^1.1.0
-        version: 1.2.0(@testing-library/jest-dom@6.9.1)(solid-js@1.9.10)(vinxi@0.5.8(@types/node@24.9.1)(better-sqlite3@11.10.0)(db0@0.3.4(better-sqlite3@11.10.0)(drizzle-orm@0.31.4(@types/better-sqlite3@7.6.13)(@types/react@19.2.2)(better-sqlite3@11.10.0)(react@19.2.0)))(drizzle-orm@0.31.4(@types/better-sqlite3@7.6.13)(@types/react@19.2.2)(better-sqlite3@11.10.0)(react@19.2.0))(ioredis@5.8.2)(jiti@2.6.1)(lightningcss@1.30.2)(rolldown@1.0.0-beta.46)(terser@5.44.0)(yaml@2.8.1))(vite@7.2.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))
-      await-to-js:
-        specifier: ^3.0.0
-        version: 3.0.0
-      better-sqlite3:
-        specifier: ^11.0.0
-        version: 11.10.0
-      drizzle-orm:
-        specifier: ^0.31.2
-        version: 0.31.4(@types/better-sqlite3@7.6.13)(@types/react@19.2.2)(better-sqlite3@11.10.0)(react@19.2.0)
-      eventemitter3:
-        specifier: ^5.0.1
-        version: 5.0.1
-      flowbite-solid:
-        specifier: workspace:*
-        version: link:packages/flowbite-solid
-      nemo-shared:
-        specifier: workspace:*
-        version: link:packages/shared
-      solid-js:
-        specifier: ^1.9.5
-        version: 1.9.10
-      vinxi:
-        specifier: ^0.5.7
-        version: 0.5.8(@types/node@24.9.1)(better-sqlite3@11.10.0)(db0@0.3.4(better-sqlite3@11.10.0)(drizzle-orm@0.31.4(@types/better-sqlite3@7.6.13)(@types/react@19.2.2)(better-sqlite3@11.10.0)(react@19.2.0)))(drizzle-orm@0.31.4(@types/better-sqlite3@7.6.13)(@types/react@19.2.2)(better-sqlite3@11.10.0)(react@19.2.0))(ioredis@5.8.2)(jiti@2.6.1)(lightningcss@1.30.2)(rolldown@1.0.0-beta.46)(terser@5.44.0)(yaml@2.8.1)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.3.1
@@ -48,24 +14,21 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.16
         version: 4.1.16(vite@7.2.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))
-      '@types/better-sqlite3':
-        specifier: ^7.6.10
-        version: 7.6.13
       '@types/node':
         specifier: ^24.7.0
         version: 24.9.1
       concurrently:
         specifier: ^8.2.2
         version: 8.2.2
-      drizzle-kit:
-        specifier: ^0.31.6
-        version: 0.31.6
       husky:
         specifier: ^9.1.7
         version: 9.1.7
       lint-staged:
         specifier: ^16.2.6
         version: 16.2.6
+      tailwindcss:
+        specifier: ^4.1.17
+        version: 4.1.17
       tsdown:
         specifier: ^0.16.0
         version: 0.16.0(typescript@5.9.3)(unrun@0.2.1)
@@ -75,6 +38,9 @@ importers:
       unplugin-solid:
         specifier: ^1.0.0
         version: 1.0.0(rollup@4.52.5)(solid-js@1.9.10)(vite@7.2.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))
+      vite:
+        specifier: ^7.2.0
+        version: 7.2.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1)
 
   packages/cli:
     dependencies:
@@ -121,6 +87,55 @@ importers:
       bumpp:
         specifier: ^10.3.1
         version: 10.3.1(magicast@0.3.5)
+
+  packages/web:
+    dependencies:
+      '@module-federation/enhanced':
+        specifier: ^0.21.2
+        version: 0.21.2(@rspack/core@1.6.0(@swc/helpers@0.5.17))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
+      '@solidjs/router':
+        specifier: ^0.15.0
+        version: 0.15.3(solid-js@1.9.10)
+      '@solidjs/start':
+        specifier: ^1.1.0
+        version: 1.2.0(@testing-library/jest-dom@6.9.1)(solid-js@1.9.10)(vinxi@0.5.8(@types/node@24.9.1)(better-sqlite3@11.10.0)(db0@0.3.4(better-sqlite3@11.10.0)(drizzle-orm@0.31.4(@types/better-sqlite3@7.6.13)(@types/react@19.2.2)(better-sqlite3@11.10.0)(react@19.2.0)))(drizzle-orm@0.31.4(@types/better-sqlite3@7.6.13)(@types/react@19.2.2)(better-sqlite3@11.10.0)(react@19.2.0))(ioredis@5.8.2)(jiti@2.6.1)(lightningcss@1.30.2)(rolldown@1.0.0-beta.46)(terser@5.44.0)(yaml@2.8.1))(vite@7.2.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))
+      await-to-js:
+        specifier: ^3.0.0
+        version: 3.0.0
+      better-sqlite3:
+        specifier: ^11.0.0
+        version: 11.10.0
+      drizzle-orm:
+        specifier: ^0.31.2
+        version: 0.31.4(@types/better-sqlite3@7.6.13)(@types/react@19.2.2)(better-sqlite3@11.10.0)(react@19.2.0)
+      eventemitter3:
+        specifier: ^5.0.1
+        version: 5.0.1
+      flowbite-solid:
+        specifier: workspace:*
+        version: link:../flowbite-solid
+      nemo-shared:
+        specifier: workspace:*
+        version: link:../shared
+      solid-js:
+        specifier: ^1.9.5
+        version: 1.9.10
+      vinxi:
+        specifier: ^0.5.8
+        version: 0.5.8(@types/node@24.9.1)(better-sqlite3@11.10.0)(db0@0.3.4(better-sqlite3@11.10.0)(drizzle-orm@0.31.4(@types/better-sqlite3@7.6.13)(@types/react@19.2.2)(better-sqlite3@11.10.0)(react@19.2.0)))(drizzle-orm@0.31.4(@types/better-sqlite3@7.6.13)(@types/react@19.2.2)(better-sqlite3@11.10.0)(react@19.2.0))(ioredis@5.8.2)(jiti@2.6.1)(lightningcss@1.30.2)(rolldown@1.0.0-beta.46)(terser@5.44.0)(yaml@2.8.1)
+    devDependencies:
+      '@types/better-sqlite3':
+        specifier: ^7.6.10
+        version: 7.6.13
+      '@types/node':
+        specifier: ^24.7.0
+        version: 24.9.1
+      drizzle-kit:
+        specifier: ^0.31.6
+        version: 0.31.6
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   plugins/plugin-wallpaper:
     devDependencies:
@@ -4109,6 +4124,9 @@ packages:
   tailwindcss@4.1.16:
     resolution: {integrity: sha512-pONL5awpaQX4LN5eiv7moSiSPd/DLDzKVRJz8Q9PgzmAdd1R4307GQS2ZpfiN7ZmekdQrfhZZiSE5jkLR4WNaA==}
 
+  tailwindcss@4.1.17:
+    resolution: {integrity: sha512-j9Ee2YjuQqYT9bbRTfTZht9W/ytp5H+jJpZKiYdP/bpnXARAuELt9ofP0lPnmHjbga7SNQIxdTAXCmtKVYjN+Q==}
+
   tapable@2.3.0:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
@@ -6122,7 +6140,7 @@ snapshots:
       consola: 3.4.2
       defu: 6.1.4
       get-port-please: 3.2.0
-      h3: 1.15.3
+      h3: 1.15.4
       http-shutdown: 1.2.2
       jiti: 1.21.7
       mlly: 1.8.0
@@ -8578,6 +8596,8 @@ snapshots:
   tailwind-merge@3.3.1: {}
 
   tailwindcss@4.1.16: {}
+
+  tailwindcss@4.1.17: {}
 
   tapable@2.3.0: {}
 

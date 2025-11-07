@@ -3,7 +3,7 @@ import {
   type RouteSectionProps
 } from "@solidjs/router";
 import { Show } from "solid-js";
-import { loginOrRegister } from "~/api";
+import { loginOrRegister } from "../api";
 
 export default function Login(props: RouteSectionProps) {
   const loggingIn = useSubmission(loginOrRegister);
