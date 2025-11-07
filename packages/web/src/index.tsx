@@ -1,4 +1,6 @@
 /* @refresh reload */
+import "./plugins/sentry";
+
 import "./index.css";
 import { render } from "solid-js/web";
 import "solid-devtools";

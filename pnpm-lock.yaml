@@ -97,6 +97,9 @@ importers:
       '@module-federation/enhanced':
         specifier: ^0.21.2
         version: 0.21.2(@rspack/core@1.6.0(@swc/helpers@0.5.17))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
+      '@sentry/solid':
+        specifier: ^10.23.0
+        version: 10.23.0(solid-js@1.9.10)
       await-to-js:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1141,6 +1144,43 @@ packages:
   '@rspack/lite-tapable@1.0.1':
     resolution: {integrity: sha512-VynGOEsVw2s8TAlLf/uESfrgfrq2+rcXB1muPJYBWbsm1Oa6r5qVQhjA5ggM6z/coYPrsVMgovl3Ff7Q7OCp1w==}
     engines: {node: '>=16.0.0'}
+
+  '@sentry-internal/browser-utils@10.23.0':
+    resolution: {integrity: sha512-FUak8FH51TnGrx2i31tgqun0VsbDCVQS7dxWnUZHdi+0hpnFoq9+wBHY+qrOQjaInZSz3crIifYv3z7SEzD0Jg==}
+    engines: {node: '>=18'}
+
+  '@sentry-internal/feedback@10.23.0':
+    resolution: {integrity: sha512-+HWC9VTPICsFX/lIPoBU9GxTaJZVXJcukP+qGxj+j/8q/Dy1w22JHDWcJbZiaW4kWWlz7VbA0KVKS3grD+e9aA==}
+    engines: {node: '>=18'}
+
+  '@sentry-internal/replay-canvas@10.23.0':
+    resolution: {integrity: sha512-GLNY8JPcMI6xhQ5FHiYO/W/3flrwZMt4CI/E3jDRNujYWbCrca60MRke6k7Zm1qi9rZ1FuhVWZ6BAFc4vwXnSg==}
+    engines: {node: '>=18'}
+
+  '@sentry-internal/replay@10.23.0':
+    resolution: {integrity: sha512-5yPD7jVO2JY8+JEHXep0Bf/ugp4rmxv5BkHIcSAHQsKSPhziFks2x+KP+6M8hhbF1WydqAaDYlGjrkL2yspHqA==}
+    engines: {node: '>=18'}
+
+  '@sentry/browser@10.23.0':
+    resolution: {integrity: sha512-9hViLfYONxRJykOhJQ3ZHQ758t1wQIsxEC7mTsydbDm+m12LgbBtXbfgcypWHlom5Yvb+wg6W+31bpdGnATglw==}
+    engines: {node: '>=18'}
+
+  '@sentry/core@10.23.0':
+    resolution: {integrity: sha512-4aZwu6VnSHWDplY5eFORcVymhfvS/P6BRfK81TPnG/ReELaeoykKjDwR+wC4lO7S0307Vib9JGpszjsEZw245g==}
+    engines: {node: '>=18'}
+
+  '@sentry/solid@10.23.0':
+    resolution: {integrity: sha512-xzBig+ssBs+WMCC0IMBDZN1XoP84zz0unPmuZ9lRL0HyxxxCRbAJIAGUYU5uWM4I1SCeSaiomABKdPO6wdLDKg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@solidjs/router': ^0.13.4
+      '@tanstack/solid-router': ^1.132.27
+      solid-js: ^1.8.4
+    peerDependenciesMeta:
+      '@solidjs/router':
+        optional: true
+      '@tanstack/solid-router':
+        optional: true
 
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
@@ -3760,6 +3800,40 @@ snapshots:
       '@swc/helpers': 0.5.17
 
   '@rspack/lite-tapable@1.0.1': {}
+
+  '@sentry-internal/browser-utils@10.23.0':
+    dependencies:
+      '@sentry/core': 10.23.0
+
+  '@sentry-internal/feedback@10.23.0':
+    dependencies:
+      '@sentry/core': 10.23.0
+
+  '@sentry-internal/replay-canvas@10.23.0':
+    dependencies:
+      '@sentry-internal/replay': 10.23.0
+      '@sentry/core': 10.23.0
+
+  '@sentry-internal/replay@10.23.0':
+    dependencies:
+      '@sentry-internal/browser-utils': 10.23.0
+      '@sentry/core': 10.23.0
+
+  '@sentry/browser@10.23.0':
+    dependencies:
+      '@sentry-internal/browser-utils': 10.23.0
+      '@sentry-internal/feedback': 10.23.0
+      '@sentry-internal/replay': 10.23.0
+      '@sentry-internal/replay-canvas': 10.23.0
+      '@sentry/core': 10.23.0
+
+  '@sentry/core@10.23.0': {}
+
+  '@sentry/solid@10.23.0(solid-js@1.9.10)':
+    dependencies:
+      '@sentry/browser': 10.23.0
+      '@sentry/core': 10.23.0
+      solid-js: 1.9.10
 
   '@socket.io/component-emitter@3.1.2': {}
 
