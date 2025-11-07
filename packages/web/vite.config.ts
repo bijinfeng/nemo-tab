@@ -4,8 +4,8 @@ import devtools from "solid-devtools/vite";
 import { defineConfig } from "vite";
 import solidPlugin from "vite-plugin-solid";
 
-const sentryOrg = import.meta.env.VITE_SENTRY_ORG;
-const sentryProject = import.meta.env.VITE_SENTRY_PROJECT;
+const sentryOrg = process.env.SENTRY_ORG;
+const sentryProject = process.env.SENTRY_PROJECT;
 
 export default defineConfig({
 	plugins: [
