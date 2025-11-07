@@ -10,11 +10,13 @@
 		"serve": "vite preview"
 	},
 	"devDependencies": {
-		"solid-devtools": "^0.34.3"
+		"solid-devtools": "^0.34.3",
+		"vite-plugin-solid": "^2.11.10"
 	},
 	"dependencies": {
 		"@module-federation/enhanced": "^0.21.2",
 		"@sentry/solid": "^10.23.0",
+		"@sentry/vite-plugin": "^4.6.0",
 		"await-to-js": "^3.0.0",
 		"eventemitter3": "^5.0.1",
 		"flowbite-solid": "workspace:*",

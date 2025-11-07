@@ -6,6 +6,8 @@ interface ViteTypeOptions {
 
 interface ImportMetaEnv {
 	readonly VITE_SENTRY_DSN: string;
+	readonly VITE_SENTRY_ORG: string;
+	readonly VITE_SENTRY_PROJECT: string;
 	// 更多环境变量...
 }
 
