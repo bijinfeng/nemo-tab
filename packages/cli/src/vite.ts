@@ -1,7 +1,14 @@
+import path from "node:path";
+import { federation } from "@module-federation/vite";
 import solid from "unplugin-solid/vite";
 import type { InlineConfig, ViteDevServer } from "vite";
 import { build, createServer } from "vite";
-import { withZephyr } from "vite-plugin-zephyr";
+import { type ModuleFederationOptions, withZephyr } from "vite-plugin-zephyr";
+
+interface CreateViteBuildOptions {
+	dev?: boolean;
+	zephyr?: boolean;
+}
 
 async function createViteServer(
 	inlineConfig: InlineConfig,
@@ -23,29 +30,31 @@ async function createViteServer(
 	return server;
 }
 
-export async function createBuildServer(options: {
-	dev?: boolean;
-}): Promise<void> {
+const federationConfig: ModuleFederationOptions = {
+	filename: "remoteEntry.js",
+	name: "remote",
+	exposes: {
+		"./index": "./src/index.ts",
+	},
+	shared: ["solid-js"],
+};
+
+export const createBuildServer = async (
+	options: CreateViteBuildOptions,
+): Promise<void> => {
 	const config: InlineConfig = {
 		build: {
 			target: "esnext",
 		},
 		plugins: [
 			solid(),
-			withZephyr({
-				mfConfig: {
-					filename: "remoteEntry.js",
-					name: "remote",
-					exposes: {
-						"./index": "./src/index.ts",
-					},
-					shared: ["solid-js"],
-				},
-			}),
+			options.zephyr
+				? withZephyr({ mfConfig: federationConfig })
+				: federation(federationConfig),
 		],
 		resolve: {
 			alias: {
-				// '@': path.resolve(__dirname, 'src'),
+				"@": path.dirname("src"),
 			},
 		},
 	};
@@ -60,4 +69,4 @@ export async function createBuildServer(options: {
 	} else {
 		await build(config);
 	}
-}
+};

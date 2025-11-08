@@ -1,4 +1,5 @@
-import type { Component } from "solid-js";
+import type { IPluginSettings, ISettingsTabContribution } from "./setting";
+import type { IPluginWallpapers, IWallpaperContribution } from "./wallpaper";
 
 /**
  * 插件配置接口
@@ -34,24 +35,10 @@ export interface IPluginModule {
  * 插件贡献点接口
  */
 export interface IPluginContributes {
+	/** 墙纸贡献 */
+	wallpaper?: IWallpaperContribution[];
 	/** 设置页面贡献 */
 	settingsTabs?: ISettingsTabContribution[];
-}
-
-/**
- * 设置页面Tab贡献接口
- */
-export interface ISettingsTabContribution {
-	/** Tab ID */
-	id: string;
-	/** Tab标题 */
-	title: string;
-	/** Tab图标 */
-	icon: string;
-	/** Tab顺序 */
-	order?: number;
-	/** Tab渲染内容 */
-	content: Component;
 }
 
 /**
@@ -64,6 +51,8 @@ export interface IPluginContext {
 	subscriptions: IPluginSubscription[];
 	/** 设置注册器 */
 	settings: IPluginSettings;
+	/** 墙纸注册器 */
+	wallpapers: IPluginWallpapers;
 }
 
 /**
@@ -86,16 +75,4 @@ export interface IPluginExtension {
 export interface IPluginSubscription {
 	/** 取消订阅 */
 	dispose: () => void;
-}
-
-/**
- * 设置注册器接口
- */
-export interface IPluginSettings {
-	/** 注册设置Tab */
-	registerSettingsTab: (tab: ISettingsTabContribution) => IPluginSubscription;
-	/** 注销设置Tab */
-	unregisterSettingsTab: (id: string) => void;
-	/** 获取所有设置Tab */
-	getSettingsTabs: () => ISettingsTabContribution[];
 }

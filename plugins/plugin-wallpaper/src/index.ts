@@ -1,9 +1,12 @@
 import { definePlugin, type IPluginContext } from "nemo-shared";
 
+import { DefaultWallpaper } from "./render";
+
 export default definePlugin({
 	// 插件激活函数
-	activate: async (_context: IPluginContext) => {
-		console.log("[SimplePluginExample] 插件激活中...");
+	activate: async (context: IPluginContext) => {
+		console.log("[Wallpaper] 插件激活中...");
+		context.wallpapers.registerRender("default", DefaultWallpaper);
 	},
 
 	// 插件停用函数
@@ -14,13 +17,11 @@ export default definePlugin({
 
 	// 插件贡献点
 	contributes: {
-		// settingsTabs: [
-		//   {
-		//     id: "text",
-		//     title: "测试",
-		//     icon: "plugin",
-		//     content: markRaw(Content),
-		//   },
-		// ],
+		wallpaper: [
+			{
+				id: "default",
+				title: "壁纸",
+			},
+		],
 	},
 });
