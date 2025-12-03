@@ -7,13 +7,11 @@ on:
 
 env:
   NODE_VERSION: "24"
+  ZE_SERVER_TOKEN: ${{ secrets.ZEPHYR_AUTH_TOKEN }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      ZE_SERVER_TOKEN: ${{ secrets.ZEPHYR_AUTH_TOKEN }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -49,3 +47,5 @@ jobs:
 
       - name: Deploy to Zephyr
         run: pnpm --filter "plugin-wallpaper" build --zephyr
+        env:
+          ZE_SERVER_TOKEN: ${{ env.ZE_SERVER_TOKEN }}
