@@ -7,7 +7,7 @@ on:
 
 env:
   NODE_VERSION: "24"
-  ZE_SERVER_TOKEN: ${{ secrets.ZEPHYR_AUTH_TOKEN }}
+  ZE_SECRET_TOKEN: ${{ secrets.ZEPHYR_AUTH_TOKEN }}
 
 jobs:
   build:
@@ -48,4 +48,4 @@ jobs:
       - name: Deploy to Zephyr
         run: pnpm --filter "plugin-wallpaper" build --zephyr
         env:
-          ZE_SERVER_TOKEN: ${{ env.ZE_SERVER_TOKEN }}
+          ZE_SECRET_TOKEN: ${{ env.ZE_SECRET_TOKEN }}
