@@ -8,6 +8,7 @@ import { type ModuleFederationOptions, withZephyr } from "vite-plugin-zephyr";
 interface CreateViteBuildOptions {
 	dev?: boolean;
 	zephyr?: boolean;
+	root?: string;
 }
 
 async function createViteServer(
@@ -30,18 +31,21 @@ async function createViteServer(
 	return server;
 }
 
-const federationConfig: ModuleFederationOptions = {
+const genFederationConfig = (root: string): ModuleFederationOptions => ({
 	filename: "remoteEntry.js",
 	name: "remote",
 	exposes: {
-		"./index": "./src/index.ts",
+		".": path.resolve(root, "src/index.ts"),
 	},
 	shared: ["solid-js"],
-};
+});
 
 export const createBuildServer = async (
 	options: CreateViteBuildOptions,
 ): Promise<void> => {
+	const rootDir = path.resolve(options.root ?? process.cwd());
+	const federationConfig = genFederationConfig(rootDir);
+
 	const config: InlineConfig = {
 		build: {
 			target: "esnext",
@@ -54,7 +58,7 @@ export const createBuildServer = async (
 		],
 		resolve: {
 			alias: {
-				"@": path.dirname("src"),
+				"@": path.resolve(rootDir, "src"),
 			},
 		},
 	};

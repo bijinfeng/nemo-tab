@@ -20,9 +20,14 @@ cli.command("dev", "Start the development server").action(async () => {
 cli
 	.command("build", "build the library for production")
 	.option("-w, --watch", "turn on watch mode, watch for changes and rebuild")
+	.option("--root <path>", "project root")
 	.option("--zephyr", "enable zephyr plugin")
-	.action(async (args: { zephyr?: boolean }) => {
-		await createBuildServer({ dev: false, zephyr: !!args.zephyr });
+	.action(async (args: { zephyr?: boolean; root?: string }) => {
+		await createBuildServer({
+			dev: false,
+			root: args.root,
+			zephyr: !!args.zephyr,
+		});
 	});
 
 export async function runCli(): Promise<void> {

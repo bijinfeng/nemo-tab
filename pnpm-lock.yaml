@@ -49,8 +49,8 @@ importers:
   packages/cli:
     dependencies:
       '@module-federation/vite':
-        specifier: ^1.9.0
-        version: 1.9.0(rollup@4.52.5)
+        specifier: ^1.9.2
+        version: 1.9.2(rollup@4.52.5)
       ansis:
         specifier: ^4.2.0
         version: 4.2.0
@@ -759,8 +759,8 @@ packages:
   '@module-federation/third-party-dts-extractor@0.21.2':
     resolution: {integrity: sha512-t8kKhD1XigGUpgFXyjpmT71gPSjR5CuTezSCSF6rIRSl+lQESiwzbPPlXHJorpKaaQJYAFtlmtNkcbvVR9nnXg==}
 
-  '@module-federation/vite@1.9.0':
-    resolution: {integrity: sha512-r97JPBtOkoZzrmEdbofenjUu1gE244dOjgdoOiaZn5KIodwJ5AnjARRxPl2xxpx5GJFK5D69AO0S4TU+HiTaRw==}
+  '@module-federation/vite@1.9.2':
+    resolution: {integrity: sha512-EOK07bxSF6/1g2zYXLT+meZPO/6lvQq1XJP6xDc5RZLj5ezXRCl0OLtMLUup+Z+gWTsVOmYd2KUmdRo08NP83Q==}
 
   '@module-federation/webpack-bundler-runtime@0.21.2':
     resolution: {integrity: sha512-06R/NDY6Uh5RBIaBOFwYWzJCf1dIiQd/DFHToBVhejUT3ZFG7GzHEPIIsAGqMzne/JSmVsvjlXiJu7UthQ6rFA==}
@@ -3795,7 +3795,7 @@ snapshots:
       fs-extra: 9.1.0
       resolve: 1.22.8
 
-  '@module-federation/vite@1.9.0(rollup@4.52.5)':
+  '@module-federation/vite@1.9.2(rollup@4.52.5)':
     dependencies:
       '@module-federation/runtime': 0.18.4
       '@module-federation/sdk': 0.18.4
@@ -6000,7 +6000,7 @@ snapshots:
   vite-plugin-zephyr@0.0.59(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1):
     dependencies:
       '@module-federation/runtime': 0.11.4
-      '@module-federation/vite': 1.9.0(rollup@4.52.5)
+      '@module-federation/vite': 1.9.2(rollup@4.52.5)
       acorn: 8.15.0
       acorn-walk: 8.3.4
       is-ci: 4.1.0
