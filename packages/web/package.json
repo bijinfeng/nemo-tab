@@ -12,8 +12,8 @@
 	"devDependencies": {
 		"@types/lodash-es": "^4.17.12",
 		"solid-devtools": "^0.34.3",
-		"vite": "^7.2.0",
-		"vite-plugin-solid": "^2.11.10"
+		"unplugin-solid": "catalog:",
+		"vite": "catalog:"
 	},
 	"dependencies": {
 		"@module-federation/enhanced": "^0.21.2",
@@ -26,7 +26,7 @@
 		"flowbite-solid": "workspace:*",
 		"lodash-es": "^4.17.21",
 		"nemo-shared": "workspace:*",
-		"solid-js": "^1.9.10",
+		"solid-js": "catalog:",
 		"tailwind-merge": "^3.3.1"
 	}
 }

@@ -8,7 +8,7 @@ import type {
 	IPluginContributes,
 	IPluginModule,
 } from "nemo-shared";
-
+import { preset } from "../preset";
 import {
 	createPluginContext,
 	getPluginContextManager,
@@ -113,7 +113,7 @@ export class PluginManager extends EventEmitter<IPluginManagerEvents> {
 		}
 
 		try {
-			const [error, plugins] = await to(Promise.resolve([]));
+			const [error, plugins] = await to(Promise.resolve(preset));
 
 			if (error) {
 				throw new Error(`Failed to fetch plugins: ${error.message}`);
@@ -232,7 +232,7 @@ export class PluginManager extends EventEmitter<IPluginManagerEvents> {
 			// 获取远程模块
 			const remoteModule = (await Promise.race([
 				this.mf
-					.loadRemote(`${instance.config.name}/index`)
+					.loadRemote(instance.config.name)
 					.then((res: any) => res.default),
 				new Promise((_, reject) =>
 					setTimeout(

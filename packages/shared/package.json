@@ -29,6 +29,7 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"bumpp": "^10.3.1"
+		"bumpp": "^10.3.1",
+		"tsdown": "catalog:"
 	}
 }
